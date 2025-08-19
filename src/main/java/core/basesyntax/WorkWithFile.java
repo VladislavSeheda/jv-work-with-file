@@ -1,11 +1,11 @@
 package core.basesyntax;
 
-import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.BufferedWriter;
-import java.io.IOException;
+import java.io.FileWriter;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 
 public class WorkWithFile {
     public void getStatistic(String fromFileName, String toFileName) {
