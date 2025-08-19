@@ -1,6 +1,11 @@
 package core.basesyntax;
 
-import java.io.*;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.FileNotFoundException;
 
 public class WorkWithFile {
     public void getStatistic(String fromFileName, String toFileName) {
@@ -25,18 +30,13 @@ public class WorkWithFile {
                     buy += amount;
                 }
             }
-
             int result = supply - buy;
-
-// Пишемо результат у файл
             bufferedWriter.write("supply," + supply);
             bufferedWriter.newLine();
             bufferedWriter.write("buy," + buy);
             bufferedWriter.newLine();
             bufferedWriter.write("result," + result);
             bufferedWriter.newLine();
-
-// Закриваємо writer
             bufferedWriter.close();
         } catch (FileNotFoundException e) {
             throw new RuntimeException("file doesn't run", e);
